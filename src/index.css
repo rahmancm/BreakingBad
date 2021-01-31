@@ -260,6 +260,12 @@ input[type='text'] {
 
 /* Pagination */
 
-.paginations {
+.pagination {
     margin: 20px 20px 20px 20px;
+}
+
+.username {
+    position: absolute;
+    right: 120px;
+    top: 30px;
 }

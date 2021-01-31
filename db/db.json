@@ -1,0 +1,79 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "walter",
+      "password": "walterwhite"
+    },
+    {
+      "id": 2,
+      "username": "walterjr",
+      "password": "walterwhitejr"
+    },
+    {
+      "id": 3,
+      "username": "jessy",
+      "password": "pinkman"
+    },
+    {
+      "username": "walter",
+      "password": "walterwhite",
+      "id": 6
+    },
+    {
+      "username": "any",
+      "password": "any",
+      "id": 7
+    },
+    {
+      "username": "walter",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "username": "any",
+      "password": "anyy",
+      "id": 9
+    },
+    {
+      "username": "user",
+      "password": "useras",
+      "id": 10
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "id": 11
+    },
+    {
+      "username": "sammy",
+      "password": "sammy",
+      "id": 12
+    },
+    {
+      "username": "sda",
+      "password": "sa",
+      "id": 13
+    },
+    {
+      "username": "user2",
+      "password": "users",
+      "id": 14
+    },
+    {
+      "username": "gallyt",
+      "password": "nakki",
+      "id": 15
+    },
+    {
+      "username": "pathanahi ji kon nasha kartha hai",
+      "password": "nasha",
+      "id": 16
+    },
+    {
+      "username": "sammy",
+      "password": "password",
+      "id": 17
+    }
+  ]
+}

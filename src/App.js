@@ -29,10 +29,7 @@ const App = () => {
     e.preventDefault();
     const user = { username, password };
     // send the username and password to the server
-    const response = await axios.post(
-      "http://blogservice.herokuapp.com/api/login",
-      user
-    );
+    const response = await axios.post("http://localhost:3001/user", user);
     // set the state of the user
     setUser(response.data);
     // store the user in localStorage
@@ -40,16 +37,18 @@ const App = () => {
   };
 
   // if there's a user show the message below
-  if (user) {
+  if (user.username === username) {
     return (
       <div>
         <BreakingBad />
+
         <button
           className="logout btn btn-warning border-radius-1"
           onClick={handleLogout}
         >
           Log out
         </button>
+        <h3 className="username">Hi {user.username} !</h3>
       </div>
     );
   }
