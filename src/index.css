@@ -249,3 +249,17 @@ input[type='text'] {
         transform: scale(1.0);
     }
 }
+
+.logout {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: yellowgreen;
+}
+
+
+/* Pagination */
+
+.paginations {
+    margin: 20px 20px 20px 20px;
+}

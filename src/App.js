@@ -44,33 +44,40 @@ const App = () => {
     return (
       <div>
         <BreakingBad />
-        <button onClick={handleLogout}>logout</button>
+        <button
+          className="logout btn btn-warning border-radius-1"
+          onClick={handleLogout}
+        >
+          Log out
+        </button>
       </div>
     );
   }
 
   // if there's no user, show the login form
   return (
-    <div>
+    <div className="center m-5">
       <img className="center" src={logo} alt="logo" />
       <form onSubmit={handleSubmit} className="loginform ">
-        <label htmlFor="username">Username: </label>
+        <label htmlFor="username">User name: </label>
+        <br />
         <input
           type="text"
           value={username}
-          placeholder="enter a username"
+          placeholder="Enter username"
           onChange={({ target }) => setUsername(target.value)}
         />
         <div>
-          <label htmlFor="password">password: </label>
+          <label htmlFor="password">Password: </label>
+          <br />
           <input
             type="text"
             value={password}
-            placeholder="enter a password"
+            placeholder="Enter password"
             onChange={({ target }) => setPassword(target.value)}
           />
         </div>
-        <button className="btn btn-success center" type="submit">
+        <button className="btn btn-danger center" type="submit">
           Login
         </button>
       </form>
