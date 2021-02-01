@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BreakingBad from "./Components/BreakingBad";
 import logo from "./images/logo.png";
+import bg from "./images/2906334.jpg";
 
 const App = () => {
   const [username, setUsername] = useState("");
@@ -22,6 +23,7 @@ const App = () => {
     setUsername("");
     setPassword("");
     localStorage.clear();
+    window.location.href = "/";
   };
 
   // login the user
@@ -29,7 +31,7 @@ const App = () => {
     e.preventDefault();
     const user = { username, password };
     // send the username and password to the server
-    const response = await axios.post("http://localhost:3001/user", user);
+    const response = await axios.post("http://localhost:3003/user", user);
     // set the state of the user
     setUser(response.data);
     // store the user in localStorage
@@ -37,7 +39,7 @@ const App = () => {
   };
 
   // if there's a user show the message below
-  if (user.username === username) {
+  if (user) {
     return (
       <div>
         <BreakingBad />
@@ -46,7 +48,7 @@ const App = () => {
           className="logout btn btn-warning border-radius-1"
           onClick={handleLogout}
         >
-          Log out
+          Log Out
         </button>
         <h3 className="username">Hi {user.username} !</h3>
       </div>
@@ -55,12 +57,18 @@ const App = () => {
 
   // if there's no user, show the login form
   return (
-    <div className="center m-5">
+    <div className="center m-5 logmain">
       <img className="center" src={logo} alt="logo" />
+      <div className="backgroundbg">
+        {" "}
+        <img src={bg} alt="background" />
+      </div>
+
       <form onSubmit={handleSubmit} className="loginform ">
         <label htmlFor="username">User name: </label>
-        <br />
+
         <input
+          className="credentials"
           type="text"
           value={username}
           placeholder="Enter username"
@@ -68,15 +76,16 @@ const App = () => {
         />
         <div>
           <label htmlFor="password">Password: </label>
-          <br />
+
           <input
+            className="credentials"
             type="text"
             value={password}
             placeholder="Enter password"
             onChange={({ target }) => setPassword(target.value)}
           />
         </div>
-        <button className="btn btn-danger center" type="submit">
+        <button className="btn btn-danger ml-5 pl-5" type="submit">
           Login
         </button>
       </form>

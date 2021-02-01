@@ -34,7 +34,7 @@ export const BreakingBad = () => {
     <div>
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
-      {items.length === 0 && (
+      {items.length === 0 && !isLoading && (
         <div className="center">
           <div>
             <h3 className="text-danger">No Such Characters found !!!</h3>
