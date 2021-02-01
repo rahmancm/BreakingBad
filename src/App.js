@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BreakingBad from "./Components/BreakingBad";
 import logo from "./images/logo.png";
-import bg from "./images/2906334.jpg";
+import bg from "./images/1xtKO9d.jpg";
 
 const App = () => {
   const [username, setUsername] = useState("");
@@ -60,7 +60,6 @@ const App = () => {
     <div className="center m-5 logmain">
       <img className="center" src={logo} alt="logo" />
       <div className="backgroundbg">
-        {" "}
         <img src={bg} alt="background" />
       </div>
 
